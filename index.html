@@ -12,16 +12,6 @@
 
         <!-- 입력 폼 -->
         <form id="form">
-            <!-- 가로, 세로, 높이 입력 -->
-            <label for="w">가로 (W, m):</label>
-            <input type="number" id="w" name="w" required><br>
-
-            <label for="d">세로 (D, m):</label>
-            <input type="number" id="d" name="d" required><br>
-
-            <label for="h">높이 (H, m):</label>
-            <input type="number" id="h" name="h" required><br>
-
             <!-- 자재 선택 -->
             <label for="material">자재 선택:</label>
             <select id="material">
@@ -31,6 +21,18 @@
                 <option value="다루끼">다루끼</option>
                 <option value="MDF">MDF</option>
             </select><br>
+
+            <!-- 가로, 세로, 높이 입력 -->
+            <div id="dimensionInputs">
+                <label for="w">가로 (W, m):</label>
+                <input type="number" id="w" name="w" required><br>
+
+                <label for="d">세로 (D, m):</label>
+                <input type="number" id="d" name="d" required><br>
+
+                <label for="h">높이 (H, m):</label>
+                <input type="number" id="h" name="h" required><br>
+            </div>
 
             <!-- 미장 밥 2번 기준 안내 -->
             <div id="mortar-note" style="display:none;">
