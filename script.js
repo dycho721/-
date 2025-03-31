@@ -34,4 +34,14 @@ function calculate() {
     document.getElementById('resultText').innerText = resultText;
 }
 
-// 자재 선택 시에 필
+// 자재 선택 시에 필드 보이기/숨기기 처리
+document.getElementById('material').addEventListener('change', function() {
+    const material = this.value;
+    const mortarNote = document.getElementById('mortar-note');
+    const dimensionInputs = document.getElementById('dimensionInputs');
+    const boardCountDiv = document.getElementById('boardCountDiv');
+    const darukiTypeDiv = document.getElementById('daruki-type');
+
+    if (material === "미장") {
+        mortarNote.style.display = 'block';
+        dimensionInputs.style.display = 'block'; // 가로,
