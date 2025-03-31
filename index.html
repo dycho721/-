@@ -12,12 +12,17 @@
 
         <!-- 입력 폼 -->
         <form id="form">
+            <!-- 가로, 세로, 높이 입력 -->
             <label for="w">가로 (W, m):</label>
             <input type="number" id="w" name="w" required><br>
 
             <label for="d">세로 (D, m):</label>
             <input type="number" id="d" name="d" required><br>
 
+            <label for="h">높이 (H, m):</label>
+            <input type="number" id="h" name="h" required><br>
+
+            <!-- 자재 선택 -->
             <label for="material">자재 선택:</label>
             <select id="material">
                 <option value="레미탈">레미탈</option>
@@ -27,9 +32,27 @@
                 <option value="MDF">MDF</option>
             </select><br>
 
-            <label for="boardCount" id="boardCountLabel" style="display:none;">석고보드 개수:</label>
-            <input type="number" id="boardCount" name="boardCount" style="display:none;"><br>
+            <!-- 미장 밥 2번 기준 안내 -->
+            <div id="mortar-note" style="display:none;">
+                <p>미장 밥 2번 기준: 0.02 m</p>
+            </div>
 
+            <!-- 석고보드 개수 입력 (다루끼 선택 시에만 보임) -->
+            <div id="boardCountDiv" style="display:none;">
+                <label for="boardCount">석고보드 개수:</label>
+                <input type="number" id="boardCount" name="boardCount"><br>
+            </div>
+
+            <!-- 다루끼 종류 선택 (300상 / 450상) -->
+            <div id="daruki-type" style="display:none;">
+                <label for="darukiType">다루끼 종류:</label>
+                <select id="darukiType">
+                    <option value="300상">300상</option>
+                    <option value="450상">450상</option>
+                </select><br>
+            </div>
+
+            <!-- 계산 버튼 -->
             <button type="button" onclick="calculate()">계산하기</button>
         </form>
 
