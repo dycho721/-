@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <h1>자재 물량 계산기</h1>
+        <p><strong>※ 로스율 10% 포함</strong></p>  <!-- 로스율 안내 추가 -->
 
-        <!-- 입력 폼 -->
         <form id="form">
             <!-- 자재 선택 -->
             <label for="material">자재 선택:</label>
@@ -22,24 +22,30 @@
                 <option value="MDF">MDF</option>
             </select><br>
 
-            <!-- 가로, 세로, 높이 입력 -->
-            <div id="dimensionInputs">
+            <!-- 가로(W) 입력 -->
+            <div id="w-input">
                 <label for="w">가로 (W, m):</label>
-                <input type="number" id="w" name="w" required><br>
+                <input type="number" id="w" name="w"><br>
+            </div>
 
+            <!-- 세로(D) 입력 -->
+            <div id="d-input">
                 <label for="d">세로 (D, m):</label>
-                <input type="number" id="d" name="d" required><br>
+                <input type="number" id="d" name="d"><br>
+            </div>
 
+            <!-- 높이(H) 입력 -->
+            <div id="h-input">
                 <label for="h">높이 (H, m):</label>
-                <input type="number" id="h" name="h" required><br>
+                <input type="number" id="h" name="h"><br>
             </div>
 
-            <!-- 미장 밥 2번 기준 안내 -->
+            <!-- 미장 안내문구 -->
             <div id="mortar-note" style="display:none;">
-                <p>미장 밥 2번 기준: 0.02 m</p>
+                <p>※ 미장 밥 2번 기준: 0.02 m</p>
             </div>
 
-            <!-- 석고보드 개수 입력 (다루끼 선택 시에만 보임) -->
+            <!-- 석고보드 개수 입력 (다루끼 선택 시 보임) -->
             <div id="boardCountDiv" style="display:none;">
                 <label for="boardCount">석고보드 개수:</label>
                 <input type="number" id="boardCount" name="boardCount"><br>
@@ -54,11 +60,9 @@
                 </select><br>
             </div>
 
-            <!-- 계산 버튼 -->
             <button type="button" onclick="calculate()">계산하기</button>
         </form>
 
-        <!-- 결과 표시 -->
         <div id="result">
             <p id="resultText"></p>
         </div>
@@ -67,3 +71,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
