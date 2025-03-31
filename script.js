@@ -44,4 +44,23 @@ document.getElementById('material').addEventListener('change', function() {
 
     if (material === "미장") {
         mortarNote.style.display = 'block';
-        dimensionInputs.style.display = 'block'; // 가로,
+        dimensionInputs.style.display = 'block'; // 가로, 세로, 높이 입력란 보이기
+        boardCountDiv.style.display = 'none';
+        darukiTypeDiv.style.display = 'none';
+    } else if (material === "레미탈") {
+        mortarNote.style.display = 'none';
+        dimensionInputs.style.display = 'block'; // 가로, 세로, 높이 입력란 보이기
+        boardCountDiv.style.display = 'none';
+        darukiTypeDiv.style.display = 'none';
+    } else if (material === "석고보드" || material === "MDF") {
+        mortarNote.style.display = 'none';
+        dimensionInputs.style.display = 'none'; // 가로, 세로, 높이 입력란 숨기기
+        boardCountDiv.style.display = 'none';
+        darukiTypeDiv.style.display = 'none';
+    } else if (material === "다루끼") {
+        mortarNote.style.display = 'none';
+        dimensionInputs.style.display = 'none'; // 가로, 세로, 높이 입력란 숨기기
+        boardCountDiv.style.display = 'block';
+        darukiTypeDiv.style.display = 'block';
+    }
+});
